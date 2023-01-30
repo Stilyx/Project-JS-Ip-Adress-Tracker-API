@@ -1,0 +1,173 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+.ip-input-info {
+  background-image: url(../images/background-image.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Input Text */
+
+.input-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input {
+  position: relative;
+  width: 555px;
+  height: 58px;
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+}
+
+.input-content img {
+  position: absolute;
+  width: 60px;
+  height: 100%;
+  bottom: 0px;
+  right: 0px;
+  object-fit: none;
+  background-color: black;
+  border-radius: 0px 15px 15px 0px;
+}
+
+.input-content img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* Ip infos */
+
+.info {
+  position: absolute;
+  top: 160px;
+  width: 90%;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  justify-content: center;
+  border-radius: 15px;
+  z-index: 2;
+  background-color: white;
+  box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.0983665);
+}
+
+.info-column {
+  border-right: 1px solid #0000005e;
+  padding-right: 40px;
+}
+.info-column:nth-child(4) {
+  border-right: none;
+}
+
+.info-title {
+  font-size: 12px;
+  color: #2c2c2c;
+  font-weight: 700;
+  opacity: 0.5;
+  margin-bottom: 13px;
+}
+
+.info-result {
+  font-weight: 500;
+  font-size: 18px;
+  color: #2c2c2c;
+}
+
+/* Map */
+
+body,
+.continer,
+#map {
+  height: 100%;
+  z-index: 1;
+}
+
+/* Scroll bar Style */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3f3f3fd8;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f3f6e;
+}
+
+/* Media Querie */
+
+@media (max-width: 950px) {
+  input {
+    width: 327px;
+    font-size: 18px;
+  }
+  input::placeholder {
+    font-size: 12px;
+  }
+
+  .ip-input-info {
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .info {
+    z-index: 3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 80%;
+  }
+
+  .info-column {
+    border-right: none;
+  }
+
+  .info-title {
+    font-size: 10px;
+  }
+
+  .info-result {
+    font-size: 10px;
+  }
+}

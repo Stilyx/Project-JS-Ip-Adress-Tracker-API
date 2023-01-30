@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <script type="module" src="js/script.js"></script>
+    <script src="js/map.js"></script>
+    <title>IP Adress Tracker</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="ip-input-info">
+        <label for="ipAdress" class="title">IP Address Tracker</label>
+        <form class="input-content">
+          <input
+            type="text"
+            name="ipAdress"
+            id="ipAdress"
+            placeholder="Search for any IP address or domain"
+          />
+          <img src="images/arrow.png" alt="arrow" class="button" />
+        </form>
+
+        <div class="info">
+          <div class="info-column">
+            <p class="info-title">IP Address</p>
+            <p class="info-result ipAdress">-</p>
+          </div>
+          <div class="info-column">
+            <p class="info-title">Location</p>
+            <p class="info-result location">-</p>
+          </div>
+          <div class="info-column">
+            <p class="info-title">Timezone</p>
+            <p class="info-result timeZone">-</p>
+          </div>
+          <div class="info-column">
+            <p class="info-title">ISP</p>
+            <p class="info-result isp">-</p>
+          </div>
+        </div>
+      </section>
+      <div id="map"></div>
+    </main>
+  </body>
+</html>
