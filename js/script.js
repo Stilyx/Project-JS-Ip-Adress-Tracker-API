@@ -14,16 +14,18 @@ const button = document.querySelector('.button');
 const changeLocation = async item => {
   const url = await fetch(`https://ipapi.co/${item}/json/`);
   const response = await url.json();
-  response.error === true
-    ? (input.placeholder = response.reason)
-    : (input.placeholder = 'Search for any IP adress or Domain');
+  if (response.error === true) {
+    input.placeholder = response.reason;
+    return;
+  }
+  input.placeholder = 'Search for any IP adress or Domain';
   showMapLocation(response);
   infoContent(response);
 };
 
 // Send Location API
 
-const sendIpInfo = () => {
+const sendIpInfo = event => {
   event.preventDefault();
   changeLocation(input.value.trim());
   input.value = '';
